@@ -3,6 +3,6 @@
 Ferramentas utilizadas desenvolver os testes: Joi + joiAssert + Mocha + Supertest 
 Ferramenta de relatórios: Mochawesome
 
-Para executar:
+Para executar:  
 `npm install`  
 `npm run test-contract`
