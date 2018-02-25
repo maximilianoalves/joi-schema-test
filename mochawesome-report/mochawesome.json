@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-02-25T12:55:31.156Z",
+    "end": "2018-02-25T12:55:32.013Z",
+    "duration": 857,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "99208464-7024-47ea-8d28-dbaede83caaf",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "5e9aaa30-4bb2-48dc-b2fd-4408fef178e1",
+        "title": "GET /posts",
+        "fullFile": "/Users/maximilianodacruz/Documents/projetos/contract-testing/joi-contract-test/test/contracts/posts/posts.js",
+        "file": "/test/contracts/posts/posts.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Deve retornar uma lista de posts",
+            "fullTitle": "GET /posts Deve retornar uma lista de posts",
+            "timedOut": false,
+            "duration": 250,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var postsList = Joi.array().items(Joi.object().keys({\n  userId: Joi.number(),\n  id: Joi.number(),\n  title: Joi.string(),\n  body: Joi.string()\n}));\nrequest.get(\"/posts\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, postsList);\n  done(err);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "09f3c369-f43a-424a-aa66-cffa70737f09",
+            "isHook": false,
+            "skipped": false
+          },
+          {
+            "title": "Deve retornar um posts único",
+            "fullTitle": "GET /posts Deve retornar um posts único",
+            "timedOut": false,
+            "duration": 177,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var postsList = Joi.object().keys({\n  userId: Joi.number(),\n  id: Joi.number(),\n  title: Joi.string(),\n  body: Joi.string()\n});\nrequest.get(\"/posts/1\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, postsList);\n  done(err);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2844b954-8108-447e-b05c-5c2c8da13efd",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "09f3c369-f43a-424a-aa66-cffa70737f09",
+          "2844b954-8108-447e-b05c-5c2c8da13efd"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 427,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 20000
+      },
+      {
+        "uuid": "58e890cc-e04f-4167-b7f3-8ab9cc70bf32",
+        "title": "GET /users",
+        "fullFile": "/Users/maximilianodacruz/Documents/projetos/contract-testing/joi-contract-test/test/contracts/users/users.js",
+        "file": "/test/contracts/users/users.js",
+        "beforeHooks": [],
+        "afterHooks": [],
+        "tests": [
+          {
+            "title": "Deve retornar uma lista de usuários",
+            "fullTitle": "GET /users Deve retornar uma lista de usuários",
+            "timedOut": false,
+            "duration": 194,
+            "state": "passed",
+            "speed": "fast",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "var userList = Joi.array().items(Joi.object().keys({\n  id: Joi.number(),\n  name: Joi.string(),\n  username: Joi.string(),\n  email: Joi.string(),\n  address: Joi.object().keys({\n    street: Joi.string(),\n    suite: Joi.string(),\n    city: Joi.string(),\n    zipcode: Joi.string(),\n    geo: Joi.object().keys({\n      lat: Joi.string(),\n      lng: Joi.string()\n    })\n  }),\n  phone: Joi.string(),\n  website: Joi.string(),\n  company: Joi.object().keys({\n    name: Joi.string(),\n    catchPhrase: Joi.string(),\n    bs: Joi.string()\n  })\n}));\nrequest.get(\"/users\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, userList);\n  done(err);\n});",
+            "err": {},
+            "isRoot": false,
+            "uuid": "76a7a0ab-8e8a-4716-9bec-433e7146dc88",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "76a7a0ab-8e8a-4716-9bec-433e7146dc88"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 194,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 20000
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 20000
+  },
+  "copyrightYear": 2018
+}

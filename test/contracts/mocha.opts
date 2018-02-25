@@ -1,5 +1,5 @@
 --require test/contracts/helpers.js
---reporter spec
---compilers js:babel-core/register
+--reporter mochawesome
 --slow 5000
+--compilers js:babel-core/register
 --timeout 20000

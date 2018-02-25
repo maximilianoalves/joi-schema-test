@@ -26,6 +26,8 @@ describe('GET /users', () => {
 
     request
       .get("/users")
+      .expect('Content-Type', /json/)
+      .expect(200)
       .end((err, res) => {
         joiAssert(res.body, userList);
         done(err);
