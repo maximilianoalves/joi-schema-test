@@ -1,0 +1,35 @@
+{
+  "name": "joi-contract-test",
+  "version": "1.0.0",
+  "description": "Exemplos de testes usando joi",
+  "main": "index.js",
+  "scripts": {
+    "test-contract": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maximilianoalves/joi-contract-test.git"
+  },
+  "author": "Maximiliano Alves da Cruz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maximilianoalves/joi-contract-test/issues"
+  },
+  "homepage": "https://github.com/maximilianoalves/joi-contract-test#readme",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
+    "chai": "^4.1.2",
+    "joi": "^13.1.2",
+    "joi-assert": "0.0.3",
+    "mocha": "^5.0.1",
+    "request": "^2.83.0",
+    "supertest": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.0.0-beta.40"
+  }
+}

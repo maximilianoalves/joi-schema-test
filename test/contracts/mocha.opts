@@ -1,0 +1,5 @@
+--require test/contracts/helpers.js
+--reporter spec
+--compilers js:babel-core/register
+--slow 5000
+--timeout 20000
