@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2018-02-25T23:38:50.246Z",
-    "end": "2018-02-25T23:38:51.640Z",
-    "duration": 1394,
+    "start": "2019-04-04T18:55:21.397Z",
+    "end": "2019-04-04T18:55:23.783Z",
+    "duration": 2386,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "f72f1e26-8ae7-48a1-aee4-f8cdcfad883e",
+    "uuid": "a4c09cc2-6513-4b4c-8201-67e94b8f2b33",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,9 +28,9 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "dc109cae-3feb-4a8a-bdae-5326d0cb6a09",
+        "uuid": "a182a8e3-df52-4fd6-a5f6-f0fb209afb50",
         "title": "GET /posts",
-        "fullFile": "/Users/maximilianodacruz/Documents/projetos/contract-testing/joi-contract-test/test/contracts/posts/posts.js",
+        "fullFile": "/Users/maximiliano/Documents/Projetos/pessoal/joi-contract-test/test/contracts/posts/posts.js",
         "file": "/test/contracts/posts/posts.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -39,7 +39,7 @@
             "title": "Deve retornar uma lista de posts",
             "fullTitle": "GET /posts Deve retornar uma lista de posts",
             "timedOut": false,
-            "duration": 717,
+            "duration": 876,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -48,7 +48,7 @@
             "code": "var postsList = Joi.array().items(Joi.object().keys({\n  userId: Joi.number(),\n  id: Joi.number(),\n  title: Joi.string(),\n  body: Joi.string()\n}));\nrequest.get(\"/posts\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, postsList);\n  done(err);\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "e9b941f7-2dda-4193-ad90-8dd6cc768302",
+            "uuid": "482c4130-49a7-4d36-971d-7dab6ffc585b",
             "isHook": false,
             "skipped": false
           },
@@ -56,7 +56,7 @@
             "title": "Deve retornar um posts único",
             "fullTitle": "GET /posts Deve retornar um posts único",
             "timedOut": false,
-            "duration": 222,
+            "duration": 704,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -65,28 +65,28 @@
             "code": "var postsList = Joi.object().keys({\n  userId: Joi.number(),\n  id: Joi.number(),\n  title: Joi.string(),\n  body: Joi.string()\n});\nrequest.get(\"/posts/1\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, postsList);\n  done(err);\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "2294b331-4437-4feb-b5c0-bc3afc6a3e4c",
+            "uuid": "cb07cd6d-20a0-4736-b8b5-691ea0fce6dd",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "e9b941f7-2dda-4193-ad90-8dd6cc768302",
-          "2294b331-4437-4feb-b5c0-bc3afc6a3e4c"
+          "482c4130-49a7-4d36-971d-7dab6ffc585b",
+          "cb07cd6d-20a0-4736-b8b5-691ea0fce6dd"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 939,
+        "duration": 1580,
         "root": false,
         "rootEmpty": false,
         "_timeout": 20000
       },
       {
-        "uuid": "4060fa2e-9355-499b-8b59-b1f34db7343f",
+        "uuid": "eb3ba56d-4921-43a3-95b7-0cce84dd7c74",
         "title": "GET /users",
-        "fullFile": "/Users/maximilianodacruz/Documents/projetos/contract-testing/joi-contract-test/test/contracts/users/users.js",
+        "fullFile": "/Users/maximiliano/Documents/Projetos/pessoal/joi-contract-test/test/contracts/users/users.js",
         "file": "/test/contracts/users/users.js",
         "beforeHooks": [],
         "afterHooks": [],
@@ -95,7 +95,7 @@
             "title": "Deve retornar uma lista de usuários",
             "fullTitle": "GET /users Deve retornar uma lista de usuários",
             "timedOut": false,
-            "duration": 192,
+            "duration": 782,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -104,19 +104,19 @@
             "code": "var userList = Joi.array().items(Joi.object().keys({\n  id: Joi.number(),\n  name: Joi.string(),\n  username: Joi.string(),\n  email: Joi.string(),\n  address: Joi.object().keys({\n    street: Joi.string(),\n    suite: Joi.string(),\n    city: Joi.string(),\n    zipcode: Joi.string(),\n    geo: Joi.object().keys({\n      lat: Joi.string(),\n      lng: Joi.string()\n    })\n  }),\n  phone: Joi.string(),\n  website: Joi.string(),\n  company: Joi.object().keys({\n    name: Joi.string(),\n    catchPhrase: Joi.string(),\n    bs: Joi.string()\n  })\n}));\nrequest.get(\"/users\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, userList);\n  done(err);\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "9e6bf453-69e4-4d6b-9cca-da3d74ff2dc8",
+            "uuid": "944132d8-b613-474b-a612-8a0fdbcf7879",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "9e6bf453-69e4-4d6b-9cca-da3d74ff2dc8"
+          "944132d8-b613-474b-a612-8a0fdbcf7879"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 192,
+        "duration": 782,
         "root": false,
         "rootEmpty": false,
         "_timeout": 20000
@@ -131,5 +131,5 @@
     "rootEmpty": true,
     "_timeout": 20000
   },
-  "copyrightYear": 2018
+  "copyrightYear": 2019
 }
