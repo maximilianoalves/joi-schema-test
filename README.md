@@ -3,7 +3,7 @@
 Projeto de exemplo para a implementação de testes de contrato de API utilizando o JOI
 
 ## Ferramentas utilizadas:
-- [VSCode](https://code.visualstudio.com/ "VSCode") / [IntelliJ CE](https://www.jetbrains.com/idea/download/ "IntelliJ CE")
+- [VSCode](https://code.visualstudio.com/ "VSCode")
 - [Joi](https://github.com/hapijs/joi "Joi")
 - [joiAssert](https://github.com/Bartvds/joi-assert "Joi assert")
 - [Mocha](https://github.com/mochajs/mocha "Mocha")
