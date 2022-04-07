@@ -1,5 +1,5 @@
 describe('GET /posts', () => {
-  it('Deve retornar uma lista de posts', done => {
+  it('Deve validar o schema de uma lista de posts', done => {
     const postsList = Joi.array().items(Joi.object().keys({
       userId: Joi.number(),
       id: Joi.number(),
@@ -17,7 +17,7 @@ describe('GET /posts', () => {
       });
   });
 
-  it('Deve retornar um posts único', done => {
+  it('Deve validar o schema de um posts único', done => {
     const postsList = Joi.object().keys({
       userId: Joi.number(),
       id: Joi.number(),

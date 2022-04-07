@@ -1,5 +1,5 @@
 describe('GET /users', () => {
-  it('Deve retornar uma lista de usuários', done => {
+  it('Deve validar o schema de uma lista de usuários', done => {
     const userList = Joi.array().items(Joi.object().keys({
       id: Joi.number(),
       name: Joi.string(),

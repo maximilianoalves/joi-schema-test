@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2019-11-29T19:00:34.710Z",
-    "end": "2019-11-29T19:00:36.163Z",
-    "duration": 1453,
+    "start": "2022-04-07T18:07:27.055Z",
+    "end": "2022-04-07T18:07:27.357Z",
+    "duration": 302,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "8dcb6d0d-6ad9-4327-9c0e-72e5e4ef935a",
+    "uuid": "7c01c17a-56fb-419e-914f-acb61fd4f615",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,18 +28,18 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "90fb22b4-0565-4cb0-84d8-4ec7e6099776",
+        "uuid": "8a4b5ef1-2db0-4cf8-be3f-24d8f649f210",
         "title": "GET /posts",
-        "fullFile": "/Users/Maximiliano/Documents/projetos/pessoal/joi-contract-test/test/contracts/posts/posts.js",
-        "file": "/test/contracts/posts/posts.js",
+        "fullFile": "/Users/maximilianoalves/Documents/projetos/pessoal/joi-schema-test/test/schemas/posts/posts.js",
+        "file": "/test/schemas/posts/posts.js",
         "beforeHooks": [],
         "afterHooks": [],
         "tests": [
           {
-            "title": "Deve retornar uma lista de posts",
-            "fullTitle": "GET /posts Deve retornar uma lista de posts",
+            "title": "Deve validar o schema de uma lista de posts",
+            "fullTitle": "GET /posts Deve validar o schema de uma lista de posts",
             "timedOut": false,
-            "duration": 541,
+            "duration": 110,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -48,15 +48,15 @@
             "code": "var postsList = Joi.array().items(Joi.object().keys({\n  userId: Joi.number(),\n  id: Joi.number(),\n  title: Joi.string(),\n  body: Joi.string()\n}));\nrequest.get(\"/posts\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, postsList);\n  done(err);\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "459e7716-2d0a-4046-bf93-d04560052607",
+            "uuid": "6a6891c2-12cb-4dd1-820a-393ec7b31bf3",
             "isHook": false,
             "skipped": false
           },
           {
-            "title": "Deve retornar um posts único",
-            "fullTitle": "GET /posts Deve retornar um posts único",
+            "title": "Deve validar o schema de um posts único",
+            "fullTitle": "GET /posts Deve validar o schema de um posts único",
             "timedOut": false,
-            "duration": 450,
+            "duration": 85,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -65,37 +65,37 @@
             "code": "var postsList = Joi.object().keys({\n  userId: Joi.number(),\n  id: Joi.number(),\n  title: Joi.string(),\n  body: Joi.string()\n});\nrequest.get(\"/posts/1\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, postsList);\n  done(err);\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "35498a83-97d7-408b-ad18-58c0930e37ac",
+            "uuid": "7e29b1e0-6a85-47f9-96e0-7124ad65a4ec",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "459e7716-2d0a-4046-bf93-d04560052607",
-          "35498a83-97d7-408b-ad18-58c0930e37ac"
+          "6a6891c2-12cb-4dd1-820a-393ec7b31bf3",
+          "7e29b1e0-6a85-47f9-96e0-7124ad65a4ec"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 991,
+        "duration": 195,
         "root": false,
         "rootEmpty": false,
         "_timeout": 20000
       },
       {
-        "uuid": "863abfc5-2750-42b2-9276-aa18cc51709b",
+        "uuid": "8d65ef82-b0f7-42c0-9fbe-802a6e69f453",
         "title": "GET /users",
-        "fullFile": "/Users/Maximiliano/Documents/projetos/pessoal/joi-contract-test/test/contracts/users/users.js",
-        "file": "/test/contracts/users/users.js",
+        "fullFile": "/Users/maximilianoalves/Documents/projetos/pessoal/joi-schema-test/test/schemas/users/users.js",
+        "file": "/test/schemas/users/users.js",
         "beforeHooks": [],
         "afterHooks": [],
         "tests": [
           {
-            "title": "Deve retornar uma lista de usuários",
-            "fullTitle": "GET /users Deve retornar uma lista de usuários",
+            "title": "Deve validar o schema de uma lista de usuários",
+            "fullTitle": "GET /users Deve validar o schema de uma lista de usuários",
             "timedOut": false,
-            "duration": 453,
+            "duration": 100,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -104,19 +104,19 @@
             "code": "var userList = Joi.array().items(Joi.object().keys({\n  id: Joi.number(),\n  name: Joi.string(),\n  username: Joi.string(),\n  email: Joi.string(),\n  address: Joi.object().keys({\n    street: Joi.string(),\n    suite: Joi.string(),\n    city: Joi.string(),\n    zipcode: Joi.string(),\n    geo: Joi.object().keys({\n      lat: Joi.string(),\n      lng: Joi.string()\n    })\n  }),\n  phone: Joi.string(),\n  website: Joi.string(),\n  company: Joi.object().keys({\n    name: Joi.string(),\n    catchPhrase: Joi.string(),\n    bs: Joi.string()\n  })\n}));\nrequest.get(\"/users\").expect('Content-Type', /json/).expect(200).end(function (err, res) {\n  joiAssert(res.body, userList);\n  done(err);\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "2db28367-a4f8-4c3b-99fd-e4076cf9c0fb",
+            "uuid": "c211697b-8560-408d-b991-c27d80fa0b12",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "2db28367-a4f8-4c3b-99fd-e4076cf9c0fb"
+          "c211697b-8560-408d-b991-c27d80fa0b12"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 453,
+        "duration": 100,
         "root": false,
         "rootEmpty": false,
         "_timeout": 20000
@@ -131,5 +131,5 @@
     "rootEmpty": true,
     "_timeout": 20000
   },
-  "copyrightYear": 2019
+  "copyrightYear": 2022
 }

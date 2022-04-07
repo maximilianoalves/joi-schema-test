@@ -1,5 +1,5 @@
 --require babel-core/register
---require test/contracts/helpers.js
+--require test/schemas/helpers.js
 --reporter mochawesome
 --slow 5000
 --watch

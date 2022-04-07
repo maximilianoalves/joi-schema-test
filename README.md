@@ -1,6 +1,6 @@
-# Testes de contrato com joi
+# Testes de schema com joi
 
-Projeto de exemplo para a implementação de testes de contrato de API utilizando o JOI
+Projeto de exemplo para a implementação de testes de schema de API utilizando o JOI
 
 ## Ferramentas utilizadas:
 - [VSCode](https://code.visualstudio.com/ "VSCode")
@@ -55,4 +55,4 @@ Projeto de exemplo para a implementação de testes de contrato de API utilizand
  ┗ 📜package.json
 ```
 
-## Post no medium explicando passo a passo: [Testes de contrato de API com Joi](https://medium.com/cwi-software/testes-de-contrato-de-api-com-joi-1ce552fe2531 "Testes de contrato de API com Joi")
+## Post no medium explicando passo a passo: [Testes de schema de API com Joi](https://medium.com/cwi-software/testes-de-contrato-de-api-com-joi-1ce552fe2531 "Testes de schema de API com Joi")

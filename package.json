@@ -4,7 +4,7 @@
   "description": "Exemplos de testes usando joi",
   "main": "index.js",
   "scripts": {
-    "test-contract": "NODE_ENV=test mocha --opts test/contracts/mocha.opts test/contracts/**/*.js"
+    "test-schema": "NODE_ENV=test mocha --opts test/schemas/mocha.opts test/schemas/**/*.js"
   },
   "repository": {
     "type": "git",
