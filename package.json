@@ -1,5 +1,5 @@
 {
-  "name": "joi-contract-test",
+  "name": "joi-schema-test",
   "version": "1.0.0",
   "description": "Exemplos de testes usando joi",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maximilianoalves/joi-contract-test.git"
+    "url": "git+https://github.com/maximilianoalves/joi-schema-test.git"
   },
   "author": "Maximiliano Alves da Cruz",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maximilianoalves/joi-contract-test/issues"
+    "url": "https://github.com/maximilianoalves/joi-schema-test/issues"
   },
-  "homepage": "https://github.com/maximilianoalves/joi-contract-test#readme",
+  "homepage": "https://github.com/maximilianoalves/joi-schema-test#readme",
   "devDependencies": {
     "joi": "^14.3.1",
     "joi-assert": "0.0.3",

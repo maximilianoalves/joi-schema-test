@@ -26,7 +26,7 @@ Projeto de exemplo para a implementação de testes de schema de API utilizando 
 ## Estrutura de pastas
 
 ```
-📦max
+📦joi-schema-test
  ┣ 📂mochawesome-report
  ┃ ┣ 📂assets
  ┃ ┃ ┣ 📜MaterialIcons-Regular.woff
